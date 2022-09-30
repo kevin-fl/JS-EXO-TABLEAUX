@@ -10,17 +10,19 @@ let tableau2 = ['jean', 'colin', 'ines', 'layane', 'sana', 'freddy', 'jeanValjea
 let tableaux = tableau1.concat(tableau2)
 console.log(tableaux);
 
+
 // * pour eviter les doublons on utilise Set
 
-let tableauxx = [...new Set(tableau1.concat(tableau2))]    //--> sous forme de tableaux
-console.log(tableauxx);
+let tableauSousFormeTableau = [...new Set(tableau1.concat(tableau2))]    //--> sous forme de tableaux
+console.log("tableauxx sous forme tableau");
+console.log(tableauSousFormeTableau);
 
-let tableauxxx = new Set(tableau1.concat(tableau2))                 //--> sous forme d objet
-console.log(tableauxxx);
+let tableauObjet = new Set(tableau1.concat(tableau2))                 //--> sous forme d objet
+console.log(tableauObjet);
 
 // * pour retransformer en tableau
-tableauxxx = [...tableauxxx]
-console.log(tableauxxx);
+tableauObjet = [...tableauObjet]
+console.log(tableauObjet);
 
 //METHODE Array.Every()  verifie chaque element du tableau , par exemple verifier si l age est + de 20 ans 
 
@@ -60,7 +62,7 @@ console.log(tousMajeur) // false
 
 //METHODE array.some()  verifie si un seul element verifie une condition
 
-const mineur = tableauy.some(tabw => tabw.age < 20)
+const mineur = tableauy.some(tabw => tabw.age < 18)
 console.log(mineur);
 
 
@@ -68,10 +70,11 @@ console.log(mineur);
 //METHODE array.filter()   pour filtrer un tableau , ex : ceux qui ont plus de 20 ans .
 
 
-const mineurX = tableauy.filter(leTab => leTab.age > 20)
-console.log(mineurX);
+//const mineurX = tableauy.filter(leTab => leTab.age > 20)
+//console.log(mineurX);
 
-
+const mineury = tableauy.filter(tab => tab.age> 20)
+console.log(mineury);
 
 //METHODE array.map()  parcours le tableau et crée un nv tableau avec les noms par ex . sinon on aurait fait boucle for() , crée un nv tableau et utiliser la methode push() ! 
 
@@ -172,4 +175,4 @@ const todoList = [
   "thermometre",
 ];
 
-console.log(todoList[2].text);
+console.log(todoList[2].text);     // va aller dans le 3 eme element , c a d rentrer dans l objet et prendre le text car on specifie on veut juste le texte , sinon recupere tout l objet 
