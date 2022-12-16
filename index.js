@@ -75,7 +75,7 @@ console.log(mineur);
 
 const mineury = tableauy.filter(tab => tab.age> 20)
 console.log(mineury);
-
+//got it 
 //METHODE array.map()  parcours le tableau et crée un nv tableau avec les noms par ex . sinon on aurait fait boucle for() , crée un nv tableau et utiliser la methode push() ! 
 
 const leBeauTableau = tableauy.map(letab => letab.name)
